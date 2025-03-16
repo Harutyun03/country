@@ -1,0 +1,27 @@
+.images{
+    width: 260px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.flag{
+    border: 2px solid white;
+    text-align: center;
+    background-color: white;
+    width: 370px;
+    height: 310px;
+    border-radius: 45px;
+    transition: 1.3s;
+    &:hover{
+        transform: scale(1.08);
+    }
+}
+
+.h2flag{
+    margin-top: 20px;
+}

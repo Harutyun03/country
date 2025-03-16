@@ -1,0 +1,25 @@
+.parent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.info{
+    border: 2px solid white;
+    background-color: white;
+    width: 350px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.images{
+        width: 260px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+.h1{
+    margin: 10px 0px 0px 0px;
+    }
