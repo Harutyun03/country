@@ -19,10 +19,10 @@ function App() {
 
   return (
     <div className='app'>
-      <Nav dispatch={dispatch}/>
+      <Nav dispatch={dispatch} text={state.text} search={state.search}/>
       <Routes>
-          <Route path='/' element={<Home state={state}/>}/>
-          <Route path='/info/:name' element={<Flaginfo state={state}/>}/>
+          <Route path='/' element={<Home state={state} />}/>
+          <Route path='/info/:name' element={<Flaginfo state={state.country} dispatch={dispatch} />}/>
       </Routes>
       </div>
   )

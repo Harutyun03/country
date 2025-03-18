@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getallActioncreator,getRegionAC,getNameAC} from "../store/store";
+import { getallActioncreator,getRegionAC,getNameAC, getSearchAC} from "../store/store";
 
 const instance = axios.create({
     baseURL : 'https://restcountries.com/v3.1'
@@ -14,8 +14,12 @@ export const API = {
         instance.get(`/region/${region}`)
           .then((res) => dispatch(getRegionAC(res.data)))
     },
-    getNameAC(dispatch, name){
+    getName(dispatch, name){
         instance.get(`/name/${name}`)
         .then((res) => dispatch(getNameAC(res.data)))
+    },
+    getSearch(dispatch,name){
+        instance.get(`/name/${name}`)
+        .then((res) => dispatch(getSearchAC(res.data)))
     }
 }

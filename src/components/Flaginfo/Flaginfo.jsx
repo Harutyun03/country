@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Flaginfo.module.css'
 import { useParams } from 'react-router-dom'
+import { API } from '../../Api/Api'
 
-const Flaginfo = ({state}) => {
+const Flaginfo = ({state, dispatch,}) => {
+  const {name}= useParams()
+  console.log(name);
+  
+
+  useEffect(() => {
+      API.getName(dispatch,name)
+  },[name])
   return (
     <div className={styles.parent}>
         {
-          state.countries.map((country) => {
+          state.map((country) => {
               return <div className={styles.info}>
                  <img src={country?.flags?.png} className={styles.images}/>
                  <h2 >{country?.name?.common}</h2>
